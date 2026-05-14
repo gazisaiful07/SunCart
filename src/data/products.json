@@ -1,0 +1,178 @@
+[
+  {
+    "id": 1,
+    "name": "UV Protection Sunglasses",
+    "brand": "SunShade",
+    "price": 15,
+    "rating": 4.7,
+    "stock": 10,
+    "description": "Stylish UV protection sunglasses for outdoor summer activities.",
+    "image": "/products/sunglasses.jpg",
+    "category": "Accessories"
+  },
+  {
+    "id": 2,
+    "name": "SPF 50 Sunscreen",
+    "brand": "GlowCare",
+    "price": 12,
+    "rating": 4.8,
+    "stock": 20,
+    "description": "Lightweight sunscreen that protects your skin from harsh sunlight.",
+    "image": "/products/sunscreen.jpg",
+    "category": "Skincare"
+  },
+  {
+    "id": 3,
+    "name": "Summer Cotton T-Shirt",
+    "brand": "AirWear",
+    "price": 18,
+    "rating": 4.6,
+    "stock": 15,
+    "description": "Soft and breathable cotton t-shirt designed for hot weather.",
+    "image": "/products/tshirt.jpg",
+    "category": "Outfits"
+  },
+  {
+    "id": 4,
+    "name": "Beach Sun Hat",
+    "brand": "CoastLine",
+    "price": 10,
+    "rating": 4.5,
+    "stock": 12,
+    "description": "Wide-brim beach hat for better sun protection and summer style.",
+    "image": "/products/hat.jpg",
+    "category": "Accessories"
+  },
+  {
+    "id": 5,
+    "name": "Comfort Summer Sandals",
+    "brand": "StepEase",
+    "price": 22,
+    "rating": 4.4,
+    "stock": 8,
+    "description": "Comfortable sandals made for beach walks and daily summer use.",
+    "image": "/products/sandals.jpeg",
+    "category": "Footwear"
+  },
+  {
+    "id": 6,
+    "name": "Insulated Water Bottle",
+    "brand": "HydroMax",
+    "price": 14,
+    "rating": 4.9,
+    "stock": 18,
+    "description": "Keeps your drink cold for hours during summer travel.",
+    "image": "/products/bottle.jpg",
+    "category": "Essentials"
+  },
+  {
+  "id": 7,
+  "name": "Beach Travel Bag",
+  "brand": "WaveCarry",
+  "price": 25,
+  "rating": 4.7,
+  "stock": 9,
+  "description": "Spacious waterproof travel bag perfect for beach vacations.",
+  "image": "/products/bag.jpeg",
+  "category": "Travel"
+},
+{
+  "id": 8,
+  "name": "Cooling Face Mist",
+  "brand": "FreshGlow",
+  "price": 11,
+  "rating": 4.5,
+  "stock": 17,
+  "description": "Refreshing cooling mist that keeps your skin hydrated all day.",
+  "image": "/products/Mist.jpg",
+  "category": "Skincare"
+},
+{
+  "id": 9,
+  "name": "Summer Shorts",
+  "brand": "UrbanFit",
+  "price": 16,
+  "rating": 4.4,
+  "stock": 14,
+  "description": "Comfortable lightweight shorts for hot summer days.",
+  "image": "/products/shorts.jpg",
+  "category": "Outfits"
+},
+{
+  "id": 10,
+  "name": "Portable Mini Fan",
+  "brand": "CoolBreeze",
+  "price": 13,
+  "rating": 4.8,
+  "stock": 11,
+  "description": "Rechargeable portable mini fan for instant cooling anywhere.",
+  "image": "/products/Fan.jpg",
+  "category": "Electronics"
+},
+{
+  "id": 11,
+  "name": "Swimming Goggles",
+  "brand": "AquaVision",
+  "price": 19,
+  "rating": 4.6,
+  "stock": 10,
+  "description": "Anti-fog swimming goggles designed for clear underwater vision.",
+  "image": "/products/Goggles.jpg",
+  "category": "Sports"
+},
+{
+  "id": 12,
+  "name": "Aloe Vera Gel",
+  "brand": "NatureCare",
+  "price": 9,
+  "rating": 4.7,
+  "stock": 22,
+  "description": "Natural aloe vera gel that soothes sun-exposed skin.",
+  "image": "/products/Aloe.webp",
+  "category": "Skincare"
+},
+{
+  "id": 13,
+  "name": "Flip Flop Sandals",
+  "brand": "BeachWalk",
+  "price": 12,
+  "rating": 4.3,
+  "stock": 16,
+  "description": "Simple and lightweight flip flops for casual summer wear.",
+  "image": "/products/Flipflop.webp",
+  "category": "Footwear"
+},
+{
+  "id": 14,
+  "name": "Polarized Sunglasses",
+  "brand": "VisionPro",
+  "price": 28,
+  "rating": 4.9,
+  "stock": 7,
+  "description": "Premium polarized sunglasses with advanced UV protection.",
+  "image": "/products/Polarized.jpg",
+  "category": "Accessories"
+},
+{
+  "id": 15,
+  "name": "Beach Chair",
+  "brand": "RelaxZone",
+  "price": 35,
+  "rating": 4.5,
+  "stock": 6,
+  "description": "Foldable beach chair built for comfort and portability.",
+  "image": "/products/Chair.avif",
+  "category": "Outdoor"
+},
+{
+  "id": 16,
+  "name": "Hydration Backpack",
+  "brand": "TrailHydro",
+  "price": 32,
+  "rating": 4.8,
+  "stock": 5,
+  "description": "Functional hydration backpack ideal for outdoor summer trips.",
+  "image": "/products/backpack.avif",
+  "category": "Travel"
+}
+]

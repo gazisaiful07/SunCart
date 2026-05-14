@@ -1,0 +1,22 @@
+[
+  {
+    "id": 1,
+    "title": "Stay Hydrated",
+    "description": "Drink enough water regularly to stay fresh and active during hot weather."
+  },
+  {
+    "id": 2,
+    "title": "Use Sunscreen",
+    "description": "Protect your skin from harmful UV rays with quality sunscreen."
+  },
+  {
+    "id": 3,
+    "title": "Wear Sunglasses",
+    "description": "UV protection sunglasses help keep your eyes safe from sunlight."
+  },
+  {
+    "id": 4,
+    "title": "Avoid Excess Heat",
+    "description": "Try to stay indoors during extreme afternoon heat whenever possible."
+  }
+]

@@ -1,9 +1,25 @@
 "use client";
 
 import Link from "next/link";
+import { authClient } from "@/lib/auth-client";
+import { useRouter } from "next/navigation";
+import toast from "react-hot-toast";
 
 const Navbar = () => {
-    const user = null; // BetterAuth connect korar por dynamic hobe
+
+    const router = useRouter();
+    const { data: session, isPending } = authClient.useSession();
+
+    const user = session?.user;
+
+    const handleLogout = async () => {
+        await authClient.signOut();
+
+        toast.success("Logout successful");
+        router.push("/login");
+        router.refresh();
+    };
+
 
     return (
         <div className="sticky top-0 z-50 border-b border-white/10 bg-black/30 backdrop-blur-xl">
@@ -24,32 +40,40 @@ const Navbar = () => {
                     </ul>
                 </div>
 
-                <div className="navbar-end gap-3">
-                    {user ? (
-                        <>
-                            <img
-                                src={user.image}
-                                alt="User"
-                                className="w-10 h-10 rounded-full border border-purple-500"
-                            />
-                            <button className="btn btn-sm gradient-btn px-5">
-                                Logout
-                            </button>
-                        </>
-                    ) : (
-                        <>
-                            <Link href="/login" className="btn btn-sm btn-ghost text-white">
-                                Login
-                            </Link>
-                            <Link href="/register" className="btn btn-sm gradient-btn px-5">
-                                Register
-                            </Link>
-                        </>
-                    )}
-                </div>
+                {isPending ? (
+                    <span className="loading loading-spinner loading-sm text-purple-400" />
+                ) : user ? (
+                    <>
+                       <div className="flex gap-3">
+                         <img
+                            src={user.image || "/default-user.png"}
+                            alt={user.name || "User"}
+                            className="h-7 w-7 rounded-full border border-purple-500 object-cover"
+                        />
 
+                        <button
+                            onClick={handleLogout}
+                            className="btn gradient-btn btn-sm px-5"
+                        >
+                            Logout
+                        </button>
+                       </div>
+                    </>
+                ) : (
+                    <>
+                        <Link href="/login" className="btn btn-ghost btn-sm text-white">
+                            Login
+                        </Link>
+
+                        <Link href="/register" className="btn gradient-btn btn-sm px-5">
+                            Register
+                        </Link>
+                    </>
+                )}
             </div>
+
         </div>
+
     );
 };
 

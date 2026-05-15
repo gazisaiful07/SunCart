@@ -1,12 +1,17 @@
-import { betterAuth } from "better-auth";
-import Database from "better-sqlite3";
-
 export const auth = betterAuth({
-  database: new Database("./suncart.sqlite"),
+  secret: process.env.BETTER_AUTH_SECRET,
+  baseURL: process.env.BETTER_AUTH_URL,
+
+  database: new Database(
+    process.env.NODE_ENV === "production"
+      ? "/tmp/suncart.sqlite"
+      : "./suncart.sqlite"
+  ),
 
   emailAndPassword: {
     enabled: true,
   },
+
   socialProviders: {
     google: {
       clientId: process.env.GOOGLE_CLIENT_ID,
@@ -14,4 +19,3 @@ export const auth = betterAuth({
     },
   },
 });
-

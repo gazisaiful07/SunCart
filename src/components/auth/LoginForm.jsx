@@ -12,7 +12,7 @@ const LoginForm = () => {
     const [loading, setLoading] = useState(false);
 
     const searchParams = useSearchParams();
-const redirectPath = searchParams.get("redirect") || "/";
+    const redirectPath = searchParams.get("redirect") || "/";
 
     const handleLogin = async (e) => {
         e.preventDefault();
@@ -42,6 +42,12 @@ const redirectPath = searchParams.get("redirect") || "/";
         alert("Login Successful");
 
         router.push(redirectPath);
+    };
+    const handleGoogleLogin = async () => {
+        await authClient.signIn.social({
+            provider: "google",
+            callbackURL: "/",
+        });
     };
 
     return (
@@ -81,6 +87,16 @@ const redirectPath = searchParams.get("redirect") || "/";
                 className="btn gradient-btn w-full"
             >
                 {loading ? "Loading..." : "Login"}
+            </button>
+
+            <div className="divider text-gray-500">OR</div>
+
+            <button
+                type="button"
+                onClick={handleGoogleLogin}
+                className="btn w-full rounded-full border border-white/10 bg-white text-black hover:bg-gray-200"
+            >
+                Continue with Google
             </button>
 
             <p className="text-center text-sm text-gray-400">

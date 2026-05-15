@@ -26,7 +26,30 @@ const Navbar = () => {
             <div className="navbar max-w-7xl mx-auto px-4">
 
                 <div className="navbar-start">
+                    <div className="dropdown md:hidden">
+                        <div tabIndex={0} role="button" className="btn btn-ghost text-white">
+                            Menu
+                        </div>
+
+                        <ul
+                            tabIndex={0}
+                            className="menu dropdown-content z-[1] mt-3 w-52 rounded-2xl border border-white/10 bg-black p-3 text-gray-200 shadow"
+                        >
+                            <li>
+                                <Link href="/">Home</Link>
+                            </li>
+                            <li>
+                                <Link href="/products">Products</Link>
+                            </li>
+                            <li>
+                                <Link href="/my-profile">My Profile</Link>
+                            </li>
+                        </ul>
+                    </div>
+
+
                     <Link href="/" className="text-2xl font-bold">
+
                         <span className="text-white">Sun</span>
                         <span className="text-purple-500">Cart</span>
                     </Link>
@@ -40,36 +63,44 @@ const Navbar = () => {
                     </ul>
                 </div>
 
-                {isPending ? (
-                    <span className="loading loading-spinner loading-sm text-purple-400" />
-                ) : user ? (
-                    <>
-                       <div className="flex gap-3">
-                         <img
-                            src={user.image || "/default-user.png"}
-                            alt={user.name || "User"}
-                            className="h-7 w-7 rounded-full border border-purple-500 object-cover"
-                        />
+                <div className="navbar-end gap-2">
+                    {isPending ? (
+                        <div className="flex gap-3">
+                            <Link href="/login" className="btn btn-ghost btn-sm text-white">
+                                Login
+                            </Link>
 
-                        <button
-                            onClick={handleLogout}
-                            className="btn gradient-btn btn-sm px-5"
-                        >
-                            Logout
-                        </button>
-                       </div>
-                    </>
-                ) : (
-                    <>
-                        <Link href="/login" className="btn btn-ghost btn-sm text-white">
-                            Login
-                        </Link>
+                            <Link href="/register" className="btn gradient-btn btn-sm px-5">
+                                Register
+                            </Link>
+                        </div>
+                    ) : user ? (
+                        <>
+                            <img
+                                src={user.image || "/default-user.png"}
+                                alt={user.name || "User"}
+                                className="h-8 w-8 rounded-full border border-purple-500 object-cover md:h-10 md:w-10"
+                            />
 
-                        <Link href="/register" className="btn gradient-btn btn-sm px-5">
-                            Register
-                        </Link>
-                    </>
-                )}
+                            <button
+                                onClick={handleLogout}
+                                className="btn gradient-btn btn-xs px-3 md:btn-sm md:px-5"
+                            >
+                                Logout
+                            </button>
+                        </>
+                    ) : (
+                        <>
+                            <Link href="/login" className="btn btn-ghost btn-sm text-white">
+                                Login
+                            </Link>
+
+                            <Link href="/register" className="btn gradient-btn btn-sm px-5">
+                                Register
+                            </Link>
+                        </>
+                    )}
+                </div>
             </div>
 
         </div>

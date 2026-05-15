@@ -45,6 +45,12 @@ const RegisterForm = () => {
 
         form.reset();
     };
+    const handleGoogleLogin = async () => {
+        await authClient.signIn.social({
+            provider: "google",
+            callbackURL: "/",
+        });
+    };
 
     return (
         <form onSubmit={handleRegister} className="space-y-5">
@@ -113,6 +119,15 @@ const RegisterForm = () => {
                 {loading ? "Loading..." : "Register"}
             </button>
 
+            <div className="divider text-gray-500">OR</div>
+
+            <button
+                type="button"
+                onClick={handleGoogleLogin}
+                className="btn w-full rounded-full border border-white/10 bg-white text-black hover:bg-gray-200"
+            >
+                Continue with Google
+            </button>
             <p className="text-center text-sm text-gray-400">
                 Already have an account?{" "}
                 <Link

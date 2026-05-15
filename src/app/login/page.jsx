@@ -1,10 +1,10 @@
 import React from 'react';
-
+import { Suspense } from "react";
 
 import LoginForm from "@/components/auth/LoginForm";
 
 const LoginPage = () => {
-   return (
+  return (
     <section className="flex min-h-screen items-center justify-center px-4 py-20">
 
       <div className="w-full max-w-md rounded-3xl border border-white/10 bg-white/5 p-8">
@@ -19,7 +19,9 @@ const LoginPage = () => {
           </h1>
         </div>
 
-        <LoginForm />
+        <Suspense fallback={<p className="text-center text-gray-400">Loading...</p>}>
+          <LoginForm />
+        </Suspense>
 
       </div>
 
